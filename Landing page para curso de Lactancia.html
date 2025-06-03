@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrición y Cuidado en la Lactancia: ¡Madre Sana, Bebé Feliz!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de color de tu paleta */
+        :root {
+            --color-light-grey: #E4EBEC; /* Fondo suave */
+            --color-rose: #DFB2C3; /* Destacado suave */
+            --color-purple-dark: #7F5B8C; /* Principal oscuro */
+            --color-teal: #9EBABF; /* Acento frío */
+            --color-lavender: #B391B6; /* Acento cálido */
+            --color-lilac: #BC94CC; /* Gradiente / Complemento */
+            --text-dark: #333;
+            --text-light: #f9f9f9;
+        }
+
+        /* Estilos Generales */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--color-light-grey);
+            scroll-behavior: smooth;
+            padding-top: 60px; /* Espacio para el banner fijo superior (reducido de 80px) */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-purple-dark);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: var(--color-purple-dark); /* CAMBIO: Color más fuerte para h1 */
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5); /* Sombra blanca para mejor legibilidad */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--color-purple-dark);
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--color-lavender);
+            text-align: left;
+            margin-top: 30px;
+            border-bottom: 2px solid var(--color-rose);
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '✓'; /* Icono de checkmark */
+            color: var(--color-teal);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Botones CTA */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-rose);
+            color: var(--text-dark); /* CAMBIO: Texto de botón a gris oscuro */
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin-top: 30px;
+        }
+
+        /* ELIMINADO: Efecto de brillo/reflejo de luz en hover */
+        /*
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+        */
+
+        .cta-button:hover {
+            background-color: var(--color-lilac);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ELIMINADO: Efecto de brillo/reflejo de luz en hover */
+        /*
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        */
+
+        .center-text {
+            text-align: center;
+        }
+
+        /* Fixed Top Banner */
+        .top-fixed-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000; /* Asegura que esté por encima de todo */
+            padding: 5px 20px; /* Ajustado padding para hacerlo más delgado */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* CAMBIO: Alineado a la izquierda */
+            height: 60px; /* CAMBIO: Altura del banner fijo (reducido de 80px) */
+        }
+
+        .top-fixed-banner .logo-fixed {
+            height: 45px; /* CAMBIO: Ajusta el tamaño del logo en el banner fijo (reducido de 60px) */
+            width: auto;
+        }
+
+        .top-fixed-banner .banner-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3em; /* Ajustado tamaño de fuente para el banner */
+            color: var(--color-purple-dark);
+            font-weight: bold;
+            margin-left: 15px; /* CAMBIO: Espacio a la izquierda del texto */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--color-purple-dark), var(--color-lilac));
+            color: var(--text-light);
+            padding: 40px 20px 60px 20px; /* Ajustado padding-bottom */
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden; /* Para el banner */
+            min-height: 350px; /* Altura mínima para que el banner se vea bien */
+            display: flex; /* Para centrar el contenido verticalmente */
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: 0; /* Eliminar bordes */
+            border-bottom-right-radius: 0; /* Eliminar bordes */
+        }
+
+        /* Banner de fondo en el header */
+        .header-banner-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://github.com/juanbls100/landingpageparacursodelactancia/blob/main/Head%20banner.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            z-index: 0; /* Asegura que esté detrás del contenido */
+            /* opacity: 0.7; */ /* Eliminado el opacity para que la imagen se vea tal cual */
+        }
+
+        /* Overlay para el efecto desvanecido y la integración de color - ELIMINADO EL FONDO MORADO */
+        .header-banner-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(to bottom, rgba(127, 91, 140, 0.6), rgba(188, 148, 204, 0.6), transparent); */ /* Comentado para quitar el tono morado */
+            z-index: 1; /* Encima de la imagen, debajo del contenido */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 3; /* Asegura que el contenido esté encima del banner */
+        }
+
+        /* Nueva sección para el primer CTA */
+        .cta-hero-section {
+            background-color: var(--color-light-grey);
+            padding-bottom: 40px;
+            padding-top: 20px; /* Espacio superior */
+            text-align: center;
+        }
+
+
+        /* Secciones */
+        .section {
+            padding: 60px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            background-color: var(--color-light-grey);
+            position: relative;
+        }
+
+        .section:nth-of-type(even) {
+            background-color: #f0f0f0; /* Alterna el color de fondo para módulos */
+        }
+
+        .section h2 {
+            margin-bottom: 40px;
+        }
+
+        .module {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--color-rose);
+            transition: all 0.3s ease; /* Transición para el hover */
+        }
+
+        /* Efecto hover para módulos */
+        .module:hover {
+            background-color: rgba(255, 255, 255, 0.9); /* Un tono más oscuro de blanco */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+            transform: translateY(-5px); /* Ligeramente levantado */
+        }
+
+        /* Testimonios o Beneficios */
+        .benefits-section {
+            background-color: var(--color-teal);
+            color: var(--text-light); /* Esto se mantiene para el color de fondo de la sección, no del texto interno */
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .benefits-section h2 {
+            color: var(--color-purple-dark); /* CAMBIO: Color del título de la sección */
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            /* Añadido un box-shadow por defecto y transición para el hover */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center; /* Alineado al centro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.25); /* Ligeramente más visible */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+        }
+
+        .benefit-item h3 {
+            color: var(--color-purple-dark); /* CAMBIO: Color del título del cuadrante */
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: none;
+            padding-bottom: 0;
+            text-align: center; /* Título centrado */
+        }
+
+        .benefit-item p {
+            font-size: 0.95em;
+            color: var(--text-dark); /* CAMBIO: Color del texto del cuadrante */
+            opacity: 1; /* Asegura que no haya transparencia si el color es oscuro */
+        }
+
+        /* Image placeholder dentro de benefit-item */
+        .benefit-item .image-placeholder-small {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-lavender);
+            margin-bottom: 15px;
+            border-radius: 50%; /* Circular */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.8em;
+            text-align: center;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+            overflow: hidden; /* Para las imágenes */
+        }
+
+        .benefit-item .image-placeholder-small svg {
+            width: 50px; /* Tamaño del SVG dentro del círculo */
+            height: 50px;
+            fill: var(--text-light);
+        }
+
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #f0f0f0; /* Un color de fondo ligeramente diferente */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* Para el efecto de deslizamiento */
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--color-purple-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--color-light-grey);
+            border-bottom: 1px solid var(--color-rose);
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-rose);
+            color: var(--text-light);
+        }
+
+        .faq-question:hover .faq-toggle-icon {
+            color: var(--text-light);
+        }
+
+        .faq-toggle-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+            color: var(--color-lavender);
+        }
+
+        .faq-question.active .faq-toggle-icon {
+            transform: rotate(45deg); /* Gira el '+' a 'x' */
+        }
+
+        .faq-answer {
+            max-height: 0;
+            padding: 0 20px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            background-color: white;
+        }
+
+        .faq-answer.active {
+            max-height: 200px; /* Ajusta según el contenido máximo de la respuesta */
+            padding: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--color-lavender);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* CAMBIO: Tono más claro para el formulario */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative; /* Para el mensaje de estado */
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-dark); /* CAMBIO: Color de label a gris oscuro para contraste */
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: calc(100% - 20px); /* Ajuste para padding */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            font-size: 1em;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: var(--color-rose);
+            color: var(--text-light);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: var(--color-purple-dark);
+            transform: translateY(-2px);
+        }
+
+        .form-status-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none; /* Oculto por defecto */
+        }
+
+        .form-status-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-status-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Instructor Section */
+        .instructor-section {
+            background-color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructor-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .instructor-photo {
+            width: 150px;
+            height: 150px;
+            background-color: var(--color-lavender);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9em;
+            text-align: center;
+            border: 3px solid var(--color-rose);
+            overflow: hidden;
+            flex-shrink: 0; /* Evita que se encoja */
+        }
+
+        .instructor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            border-radius: 50%; /* Mantiene la imagen circular */
+        }
+
+        .instructor-info {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .instructor-info h3 {
+            color: var(--color-purple-dark);
+            margin-bottom: 10px;
+            border-bottom: none;
+        }
+
+        @media (min-width: 768px) {
+            .instructor-content {
+                flex-direction: row;
+                text-align: left;
+                justify-content: center;
+            }
+            .instructor-info {
+                text-align: left;
+                padding-left: 30px;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--color-light-grey);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+            position: relative;
+            border-top: 5px solid var(--color-teal);
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--color-purple-dark);
+            font-size: 1.1em;
+        }
+
+        .testimonial-quote-icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 3em;
+            color: var(--color-rose);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--color-purple-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--color-rose);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--color-lilac);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacio entre iconos */
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--color-lavender);
+            border-radius: 50%; /* Iconos circulares */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--color-rose);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .social-icons svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-light); /* Color del icono */
+        }
+
+        /* Imagen de la pareja */
+        .image-couple {
+            max-width: 400px; /* CAMBIO: Reducir el tamaño de la imagen */
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block; /* Para que margin: auto funcione */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* Responsividad */
+        @media (max-width: 767px) {
+            .top-fixed-banner .banner-text {
+                font-size: 1.1em; /* Ajusta el tamaño del texto para móviles */
+                margin-right: 10px;
+            }
+            .top-fixed-banner .logo-fixed {
+                height: 40px; /* Ajusta el tamaño del logo para móviles */
+            }
+            body {
+                padding-top: 60px; /* Ajuste para móviles */
+            }
+            h1 {
+                font-size: 2.2em; /* Ajuste de tamaño de fuente para móviles */
+            }
+            h2 {
+                font-size: 1.8em; /* Ajuste de tamaño de fuente para móviles */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .module-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5em;
+            }
+            h2 {
+                font-size: 2.8em;
+            }
+            .module {
+                padding: 40px;
+            }
+            /* Ajuste para el temario simplificado */
+            .simplified-temario-module {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            .simplified-temario-module h3 {
+                text-align: center;
+                border-bottom: none;
+            }
+            .image-placeholder {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-fixed-banner">
+        <img src="https://github.com/juanbls100/landingpageparacursodelactancia/blob/main/Untitled%20design%20(8).png?raw=true" alt="Logo Floreciendo con Nutrición" class="logo-fixed">
+        <span class="banner-text">Floreciendo con nutrición</span>
+    </nav>
+
+    <header>
+        <div class="header-banner-bg"></div>
+
+        <div class="header-content">
+            <h1>Lactancia Plena y Nutrición Consciente:</h1>
+            <h2 style="color: var(--color-purple-dark); text-shadow: 2px 2px 4px rgba(255,255,255,0.5);">Guía para Madres Felices.</h2>
+            <p style="color: var(--text-dark); text-shadow: 1px 1px 2px rgba(255,255,255,0.2);"><strong>Transforma tu experiencia de lactancia con nuestro curso práctico. Aprende a nutrirte y cuidar a tu bebé con confianza y bienestar.</strong></p>
+        </div>
+    </header>
+
+    <section class="cta-hero-section">
+        <div class="container">
+            <a href="#inscripcion" class="cta-button">¡Inscríbete Ahora!</a>
+        </div>
+    </section>
+
+    <section class="section benefits-section">
+        <div class="container">
+            <h2>¿Por qué este curso es para ti?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-1-13h2v7h-2zm0 8h2v2h-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Nutrición Óptima para Ambos</h3>
+                    <p>Aprenderás a optimizar tu dieta para asegurar que tanto tú como tu bebé reciban todos los nutrientes esenciales, promoviendo tu energía y el desarrollo saludable de tu pequeño.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm0 15h-2v-2h4v2zm2.24-4.33c-1.08-.85-2.24-1.57-2.24-2.42 0-.85.67-1.52 1.52-1.52.79 0 1.48.5 1.73 1.24l1.48-.65C16.29 8.23 15.2 7 13.52 7c-1.92 0-3.48 1.56-3.48 3.48 0 1.43.83 2.67 2.04 3.42L12 15.5V17h1v-1.58l1.24-.65zM12 20c-1.1 0-2 .9-2 2h4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Lactancia sin Mitos ni Estrés</h3>
+                    <p>Despejarás las dudas más comunes y desmentirás mitos que generan ansiedad, permitiéndote disfrutar de la lactancia con confianza y tranquilidad.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>Bienestar Materno Integral</h3>
+                    <p>Más allá de la alimentación, descubrirás estrategias para el autocuidado, manejo del estrés y la salud mental en el posparto, fundamentales para una maternidad plena.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                    <h3>Identificación de Sensibilidades</h3>
+                    <p>Obtendrás las herramientas para identificar posibles sensibilidades alimentarias en tu bebé relacionadas con tu dieta, sabiendo cómo actuar de manera informada y segura.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-10h4v2h-4zm0 4h4v2h-4z"/>
+                        </svg>
+                    </div>
+                    <h3>Apoyo Continuo y Profesional</h3>
+                    <p>Conocerás los recursos y profesionales a los que puedes acudir en cada etapa de tu lactancia, asegurando que nunca te sientas sola en este hermoso camino.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="image-placeholder-small">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            <path d="M12 7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Fortalecimiento del Vínculo</h3>
+                    <p>Una lactancia informada y sin preocupaciones te permitirá conectar de manera más profunda con tu bebé, fortaleciendo el vínculo y la experiencia de la maternidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Temario del Curso</h2>
+            <p class="center-text">Descubre cómo cada módulo te guiará paso a paso hacia una lactancia informada y empoderada.</p>
+
+            <div class="module simplified-temario-module">
+                <h3>Módulo 1: Preparación y Pilares de la Lactancia</h3>
+            </div>
+
+            <div class="module simplified-temario-module">
+                <h3>Módulo 2: Nutrición, Salud Materna y Desafíos Comunes</h3>
+            </div>
+
+            <div class="module simplified-temario-module">
+                <h3>Módulo 3: Cuidado Integral y Empoderamiento</h3>
+            </div>
+
+            <div class="center-text">
+                <a href="ruta/a/tu/temario_completo.pdf" target="_blank" class="cta-button">Descarga el Temario Completo</a>
+            </div>
+
+            <div class="center-text" id="inscripcion" style="margin-top: 60px;">
+                <h2>¿Lista para nutrirte y empoderarte?</h2>
+                <p>Inscríbete hoy y comienza tu viaje hacia una lactancia informada y feliz.</p>
+                <img src="https://github.com/juanbls100/landingpageparacursodelactancia/blob/main/Gemini_Generated_Image_f5ks9lf5ks9lf5ks.jpeg?raw=true" alt="Madre e hijo felices" class="image-couple" onerror="this.onerror=null;this.src='https://placehold.co/400x250/E4EBEC/7F5B8C?text=Imagen+no+disponible';">
+                <a href="https://wa.me/5617206328" target="_blank" class="cta-button">¡Quiero Inscribirme Ahora!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Lo que dicen nuestras madres</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <span class="testimonial-quote-icon">“</span>
+                    <p>"Este curso cambió por completo mi perspectiva sobre la lactancia. Me siento mucho más segura y mi bebé está feliz y sano. ¡Lo recomiendo al 100%!"</p>
+                    <div class="testimonial-author">- Ana G., Madre de 1</div>
+                </div>
+                <div class="testimonial-item">
+                    <span class="testimonial-quote-icon">“</span>
+                    <p>"La información es clara y práctica. Pude aplicar los consejos de nutrición desde el primer día y noté la diferencia en mi energía y la tranquilidad de mi bebé."</p>
+                    <div class="testimonial-author">- Sofía M., Madre de 2</div>
+                </div>
+                <div class="testimonial-item">
+                    <span class="testimonial-quote-icon">“</span>
+                    <p>"Gracias a este curso, superé mis miedos y pude establecer una lactancia exitosa. El apoyo y la guía fueron invaluables. ¡Una inversión en mi bienestar y el de mi hijo!"</p>
+                    <div class="testimonial-author">- Laura P., Madre primeriza</div>
+                </div>
+                <div class="testimonial-item">
+                    <span class="testimonial-quote-icon">“</span>
+                    <p>"Nunca pensé que aprendería tanto sobre la lactancia en un solo lugar. Los módulos son fáciles de seguir y los consejos son realmente útiles. ¡Me siento mucho más preparada!"</p>
+                    <div class="testimonial-author">- Carmen R., Nueva mamá</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instructor-section">
+        <div class="container">
+            <h2>Conoce a tu Guía</h2>
+            <div class="instructor-content">
+                <div class="instructor-photo">
+                    <img src="https://github.com/juanbls100/landingpageparacursodelactancia/blob/main/Nutriologa%20foto%20de%20perfil.jpeg?raw=true" alt="Foto de la Lic. Verónica Gonzales Islas Bustamante" onerror="this.onerror=null;this.src='https://placehold.co/150x150/B391B6/f9f9f9?text=Error+Carga+Imagen';" />
+                </div>
+                <div class="instructor-info">
+                    <h3>Lic. en Nutrición Verónica Gonzales Islas Bustamante</h3>
+                    <p>Soy Licenciada en Nutrición con especialidad en materno infantil y lactancia. Mi pasión es empoderar a las madres para que vivan una lactancia plena y sin preocupaciones, brindándoles herramientas basadas en la evidencia y un apoyo incondicional. Con años de experiencia y un profundo amor por la maternidad, he diseñado este curso para que te sientas segura, informada y conectada con tu bebé a través de la lactancia.</p>
+                    <p>¡Estoy emocionada de acompañarte en este hermoso viaje!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Este curso es solo para madres primerizas?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, este curso está diseñado para madres en cualquier etapa de la lactancia, ya sean primerizas o experimentadas. Abordamos temas fundamentales y desafíos comunes que pueden surgir en cualquier momento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Necesito tener conocimientos previos de nutrición?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, no necesitas conocimientos previos. El curso está estructurado para ser accesible y comprensible para todas. Explicamos los conceptos de nutrición de manera sencilla y práctica.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Cuánto tiempo tendré acceso al contenido del curso?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tendrás acceso ilimitado al contenido del curso, para que puedas revisarlo a tu propio ritmo y consultarlo siempre que lo necesites, incluso después de que tu bebé crezca.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Se incluyen materiales descargables o recursos adicionales?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, el curso incluye infografías, listas de alimentos, plantillas de registro y enlaces a recursos confiables y grupos de apoyo para complementar tu aprendizaje.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Puedo hacer preguntas o recibir apoyo personalizado?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Durante el curso, tendrás oportunidades para plantear tus dudas en sesiones de preguntas y respuestas. Además, te proporcionaremos contactos de profesionales y grupos de apoyo para un seguimiento más personalizado si lo requieres.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Este curso reemplaza la consulta con un especialista?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Este curso proporciona información valiosa y herramientas prácticas para la lactancia y nutrición. Sin embargo, no reemplaza la consulta individual con un médico, nutriólogo o consultor de lactancia certificado para casos específicos o condiciones de salud.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Cuál es la duración estimada para completar el curso?
+                        <span class="faq-toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El curso está diseñado para que lo tomes a tu propio ritmo. El contenido principal puede ser revisado en aproximadamente 3-4 horas, pero te recomendamos dedicar tiempo adicional para las actividades prácticas y la reflexión personal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>O si lo prefieres, déjanos tus datos y nos ponemos en contacto contigo</h2>
+            <form class="contact-form" id="contactForm">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="tu.correo@ejemplo.com" required>
+
+                <label for="telefono">Número de teléfono (opcional):</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. +52 55 1234 5678">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Me gustaría saber más sobre..." required></textarea>
+
+                <input type="submit" value="Enviar Mensaje">
+                <div id="formStatusMessage" class="form-status-message"></div>
+                <p style="margin-top: 15px;"><a href="ruta/a/tu/aviso-de-privacidad.html" target="_blank" style="color: var(--text-dark); text-decoration: underline;">Aviso de Privacidad</a></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nutrición y Cuidado en la Lactancia | Floreciendo con nutrición. Todos los derechos reservados.</p>
+            <p>Hecho con amor para madres y bebés.</p>
+            <p><a href="ruta/a/tu/politica-de-privacidad.html" target="_blank">Política de Privacidad</a></p>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.657 9.18 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.505 1.492-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.455h-1.26c-1.247 0-1.642.776-1.642 1.579V12h2.77l-.443 2.89h-2.327v6.988C18.343 21.18 22 17.016 22 12c0-5.523-4.477-10-10-10z"/>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07c1.265.058 1.944.296 2.488.508.54.212.973.475 1.385.887.412.412.675.845.887 1.388.212.543.45 1.222.508 2.487.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.058 1.265-.296 1.944-.508 2.488-.212.54-.475.973-.887 1.385-.412.412-.675.845-.887 1.388-.212.543-.45 1.222-.508 2.487-.058 1.266-.07 1.646-.07 4.85s.012-3.584.07-4.85c.058-1.265.296-1.944.508-2.488.212-.54.475-.973.887-1.385.412.412.675.845.887-1.388.212-.543.45-1.222.508-2.487-.058-1.266-.07-1.646-.07-4.85zM12 4.075c-3.722 0-4.184.016-5.61.082-1.423.067-2.38.307-2.92.528-.54.22-.92.475-1.33.885-.41.41-.665.79-.885 1.33-.22.54-.46 1.497-.528 2.92C4.09 7.816 4.075 8.278 4.075 12s.016 4.184.082 5.61c.067 1.423.307 2.38.528 2.92.22.54.475.92.885 1.33.41.41.79.665 1.33.885.54.22 1.497.46 2.92.528C7.816 19.91 8.278 19.925 12 19.925s4.184-.016 5.61-.082c1.423-.067 2.38-.307 2.92-.528.54-.22.92-.475 1.33-.885.41-.41.665-.79.885-1.33.22-.54-.46-1.497-.528-2.92C19.91 16.184 19.925 15.722 19.925 12s-.016-4.184-.082-5.61c-.067-1.423-.307-2.38-.528-2.92-.22-.54-.475-.92-.885-1.33-.41-.41-.79-.665-1.33-.885-.54-.22-1.497-.46-2.92-.528C16.184 4.09 15.722 4.075 12 4.075zM12 7.275c-2.607 0-4.725 2.118-4.725 4.725s2.118 4.725 4.725 4.725 4.725-2.118 4.725-4.725-2.118-4.725-4.725-4.725zm0 7.775c-1.68 0-3.05-1.37-3.05-3.05s1.37-3.05 3.05-3.05 3.05 1.37 3.05 3.05-1.37 3.05-3.05 3.05zm6.406-11.845c-.808 0-1.465.657-1.465 1.465s.657 1.465 1.465 1.465 1.465-.657 1.465-1.465-.657-1.465-1.465-1.465z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Pequeño script para el efecto de scroll suave en los CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Script para la funcionalidad de FAQ (Acordeón)
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling; // El div de respuesta es el siguiente hermano
+                const icon = question.querySelector('.faq-toggle-icon');
+
+                // Cierra todas las demás respuestas abiertas
+                faqQuestions.forEach(q => {
+                    if (q !== question && q.classList.contains('active')) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                        q.querySelector('.faq-toggle-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Abre o cierra la respuesta actual
+                question.classList.toggle('active');
+                answer.classList.toggle('active');
+
+                if (answer.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px"; // Ajusta la altura dinámicamente
+                    icon.style.transform = 'rotate(45deg)'; // Cambia '+' a 'x'
+                } else {
+                    answer.style.maxHeight = "0"; // Cierra la respuesta
+                    icon.style.transform = 'rotate(0deg)'; // Vuelve a '+'
+                }
+            });
+        });
+
+        // Script para la validación del formulario de contacto
+        const contactForm = document.getElementById('contactForm');
+        const formStatusMessage = document.getElementById('formStatusMessage');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío por defecto del formulario
+
+            let isValid = true;
+            const nombre = document.getElementById('nombre');
+            const correo = document.getElementById('correo');
+            const mensaje = document.getElementById('mensaje');
+
+            // Limpiar mensajes de error previos
+            formStatusMessage.textContent = '';
+            formStatusMessage.classList.remove('success', 'error');
+            formStatusMessage.style.display = 'none';
+
+            // Validación de Nombre
+            if (nombre.value.trim() === '') {
+                isValid = false;
+                showFormMessage('Por favor, ingresa tu nombre completo.', 'error');
+                nombre.focus();
+                return; // Detener la ejecución si hay un error
+            }
+
+            // Validación de Correo Electrónico
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (correo.value.trim() === '') {
+                isValid = false;
+                showFormMessage('Por favor, ingresa tu correo electrónico.', 'error');
+                correo.focus();
+                return;
+            } else if (!emailRegex.test(correo.value.trim())) {
+                isValid = false;
+                showFormMessage('Por favor, ingresa un correo electrónico válido.', 'error');
+                correo.focus();
+                return;
+            }
+
+            // Validación de Mensaje
+            if (mensaje.value.trim() === '') {
+                isValid = false;
+                showFormMessage('Por favor, escribe tu mensaje.', 'error');
+                mensaje.focus();
+                return;
+            }
+
+            if (isValid) {
+                // Aquí iría la lógica para enviar el formulario (ej. fetch API, XMLHttpRequest)
+                // Por ahora, solo mostraremos un mensaje de éxito simulado
+                showFormMessage('¡Gracias! Tu mensaje ha sido enviado. Nos pondremos en contacto contigo pronto.', 'success');
+                contactForm.reset(); // Limpiar el formulario
+            }
+        });
+
+        function showFormMessage(message, type) {
+            formStatusMessage.textContent = message;
+            formStatusMessage.classList.add(type);
+            formStatusMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
